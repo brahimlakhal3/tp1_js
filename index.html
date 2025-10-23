@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Mini-quiz</title>
+</head>
+<body>
+<main class="page">
+    <header class="page-header">
+        <h1>Mini-quiz</h1>
+        <p class="subtitle">Questions simples en développement web</p>
+    </header>
+
+    <section class="quiz card">
+        <div class="group">
+            <h2>QCM (choix simple)</h2>
+
+            <div class="question">
+                <div class="q-title">1. Quel élément HTML sert à créer un lien cliquable ?</div>
+                <div class="choices">
+                    <label><input type="radio" name="q1" value="a"> &lt;img&gt;</label>
+                    <label class="true"><input type="radio" name="q1" value="b"> &lt;a&gt;</label>
+                    <label><input type="radio" name="q1" value="c"> &lt;button&gt;</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="q-title">2. Quelle propriété CSS change la couleur du texte ?</div>
+                <div class="choices">
+                    <label><input type="radio" name="q2" value="a"> background-color</label>
+                    <label class="true"><input type="radio" name="q2" value="b"> color</label>
+                    <label><input type="radio" name="q2" value="c"> font-size</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="q-title">3. Quel attribut HTML définit le texte alternatif d'une image ?</div>
+                <div class="choices">
+                    <label><input type="radio" name="q3" value="a"> src</label>
+                    <label><input type="radio" name="q3" value="b"> title</label>
+                    <label class="true"><input type="radio" name="q3" value="c"> alt</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="q-title">4. En JavaScript, comment affiche-t-on quelque chose dans la console ?</div>
+                <div class="choices">
+                    <label class="true"><input type="radio" name="q4" value="a"> console.log()</label>
+                    <label><input type="radio" name="q4" value="b"> print()</label>
+                    <label><input type="radio" name="q4" value="c"> echo()</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="q-title">5. Quel élément HTML est utilisé pour inclure le code CSS externe ?</div>
+                <div class="choices">
+                    <label><input type="radio" name="q5" value="a"> &lt;script&gt;</label>
+                    <label class="true"><input type="radio" name="q5" value="b"> &lt;link rel="stylesheet"&gt;</label>
+                    <label><input type="radio" name="q5" value="c"> &lt;style src="style.css"&gt;</label>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Choix multiples -->
+        <div class="group">
+            <h2>Checklist (choix multiple)</h2>
+
+            <div class="checkbox-q" data-question="q1">
+                <p>1. Quels langages sont utilisés pour le développement front-end ?</p>
+                <label class="true"><input type="checkbox" name="c1" value="html"> HTML</label>
+                <label class="true"><input type="checkbox" name="c1" value="css"> CSS</label>
+                <label class="true"><input type="checkbox" name="c1" value="javascript"> JavaScript</label>
+                <label><input type="checkbox" name="c1" value="python"> Python</label>
+            </div>
+
+            <div class="checkbox-q" data-question="q2">
+                <p>2. Lesquels de ces éléments sont des balises HTML ?</p>
+                <label class="true"><input type="checkbox" name="c2" value="div">&lt;div&gt;</label>
+                <label><input type="checkbox" name="c2" value="if"> if</label>
+                <label class="true"><input type="checkbox" name="c2" value="section">&lt;section&gt;</label>
+                <label><input type="checkbox" name="c2" value="return"> return</label>
+            </div>
+
+            <div class="checkbox-q" data-question="q3">
+                <p>3. Lesquelles de ces propriétés CSS contrôlent la mise en page ?</p>
+                <label class="true"><input type="checkbox" name="c3" value="display"> display</label>
+                <label class="true"><input type="checkbox" name="c3" value="margin"> margin</label>
+                <label><input type="checkbox" name="c3" value="color"> color</label>
+                <label class="true"><input type="checkbox" name="c3" value="padding"> padding</label>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="btn">Résultat</button>
+            <button id="btn2">Refrech</button>
+            <div id="result" class="result"></div>
+        </div>
+    </section>
+</main>
+
+<dialog id="scoreDialog">
+    <h3>Résultat du quiz</h3>
+    <p id="dialogContent"></p>
+    <button id="closeDialog">Fermer</button>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>

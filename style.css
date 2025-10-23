@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial
+}
+
+body {
+    background: #f7f9fc;
+    color: #0f172a;
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center
+}
+
+.page {
+    width: 100%;
+    max-width: 900px
+}
+
+.page-header {
+    margin-bottom: 18px;
+    text-align: left
+}
+
+.page-header h1 {
+    margin: 0 0 6px;
+    font-size: 28px
+}
+
+.subtitle {
+    color: #6b7280;
+    margin: 0
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 6px 20px rgba(16, 24, 40, 0.06)
+}
+
+.group + .group {
+    margin-top: 14px
+}
+
+.question {
+    padding: 10px 0;
+    border-bottom: 1px dashed #eef2ff
+}
+
+.q-title {
+    font-weight: 600;
+    margin-bottom: 8px
+}
+
+.choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
+ label {
+    background: #f3f6ff;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px
+}
+ .active{
+     background: #b0ec74;
+     padding: 8px 10px;
+     border-radius: 8px;
+     cursor: pointer;
+     display: inline-flex;
+     align-items: center;
+     gap: 8px
+ }
+
+.choices input {
+    accent-color: #276EF1
+}
+
+.checkbox-q {
+    padding: 10px 0
+}
+
+
+.actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    align-items: center
+}
+
+#btn {
+    background: #276EF1;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+#btn:hover {
+    filter: brightness(.95)
+}
+
+#btn2 {
+    background: #e54343;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+#btn2:hover {
+    filter: brightness(.95)
+}
+
+.result {
+    min-height: 40px;
+    color: #6b7280
+}
+
+.page-footer {
+    margin-top: 12px;
+    text-align: center;
+    color: #6b7280
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .choices {
+        flex-direction: column
+    }
+
+    .page {
+        padding: 0 12px
+    }
+}
+
+#scoreDialog {
+    border: none;
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(16,24,40,0.2);
+}
+
+#scoreDialog button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #276EF1;
+    color: white;
+    cursor: pointer;
+}
+
+#scoreDialog button:hover {
+    filter: brightness(0.95);
+}
+
